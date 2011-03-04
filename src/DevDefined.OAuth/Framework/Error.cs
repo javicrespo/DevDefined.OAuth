@@ -205,5 +205,10 @@ namespace DevDefined.OAuth.Framework
   	{
 			return new Exception("It appears this may be the first Uri constructed by this AppDomain, and you have no App.config or Web.config file - which has triggered an unusual edge case: see this blog post from more details - http://ayende.com/Blog/archive/2010/03/04/is-select-system.uri-broken.aspx", argumentException);
   	}
+        
+    public static Exception CertificateNotAvailable(IOAuthContext context)
+    {
+        return new OAuthException(context, OAuthProblems.CertificateNotAvailable, "Certificate not available");
+    }
   }
 }
