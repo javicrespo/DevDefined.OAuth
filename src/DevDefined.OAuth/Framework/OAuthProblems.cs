@@ -47,5 +47,6 @@ namespace DevDefined.OAuth.Framework
     public const string TokenUsed = "token_used";
     public const string UserRefused = "user_refused";
     public const string VersionRejected = "version_rejected";
+    public const string CertificateNotAvailable = "certificate_not_available";
   }
 }
