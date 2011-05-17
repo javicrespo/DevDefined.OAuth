@@ -301,7 +301,7 @@ namespace DevDefined.OAuth.Framework
     public string GenerateBodyHash()
     {
         var hash = SHA1.Create().ComputeHash((RawContent ?? new byte[0]));
-        return UriUtility.UrlEncode(Convert.ToBase64String(hash));  
+        return Convert.ToBase64String(hash);  
     }
 
     public string GenerateSignatureBase()
